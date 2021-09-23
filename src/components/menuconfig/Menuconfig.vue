@@ -4,7 +4,7 @@
 
       <div >
 
-        <label>Perm</label>
+        <label>menus</label>
       </div>
     </div>
   </div>

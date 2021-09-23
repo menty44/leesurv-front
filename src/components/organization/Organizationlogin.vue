@@ -51,6 +51,7 @@
 import router from "../../router";
 
 export default {
+
   data() {
     return {
       labelPosition: 'left',
@@ -65,6 +66,7 @@ export default {
   },
   methods: {
     login() {
+      localStorage.setItem("menu", "open")
       router.push({ path: '/dashboard' })
     }
   }

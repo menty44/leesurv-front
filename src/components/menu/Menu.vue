@@ -10,22 +10,27 @@
   >
 
     <el-menu-item index="1"><img height="30px" src="../../assets/SRVeY.png"></el-menu-item>
-    <el-menu-item index="2">
+    <el-menu-item index="9" @click="dashboard">
+      <i class="el-icon-house"></i>
+      Dashboard</el-menu-item>
+
+    <el-menu-item index="2" @click="analytics">
       <i class="el-icon-menu"></i>
       Analytics</el-menu-item>
-    <el-menu-item index="3">
+
+    <el-menu-item index="3" @click="awards">
       <i class="el-icon-wallet"></i>
       My Awards</el-menu-item>
 
-    <el-menu-item index="4" >
+    <el-menu-item index="4" @click="surveys">
       <i class="el-icon-pie-chart"></i>
       Surveys</el-menu-item>
 
-    <el-menu-item index="5" >
+    <el-menu-item index="5" @click="users">
       <i class="el-icon-grape"></i>
       Users</el-menu-item>
 
-    <el-menu-item index="6" >
+    <el-menu-item index="6" @click="profile">
       <i class="el-icon-user"></i>
       Profile</el-menu-item>
 
@@ -33,19 +38,19 @@
       <template #title>
         <i class="el-icon-setting"></i>
         Communications</template>
-      <el-menu-item index="7-1">Send Email</el-menu-item>
+      <el-menu-item index="7-1" @click="email">Send Email</el-menu-item>
 
-      <el-menu-item index="7-2">Send SMS</el-menu-item>
+      <el-menu-item index="7-2" @click="sms">Send SMS</el-menu-item>
     </el-sub-menu>
 
     <el-sub-menu index="8">
 
       <template #title><i class="el-icon-setting"></i>
         Settings</template>
-      <el-menu-item index="8-1">Roles</el-menu-item>
-      <el-menu-item index="8-2">Permissions</el-menu-item>
-      <el-menu-item index="8-3">Menus</el-menu-item>
-      <el-menu-item index="8-3">Channels</el-menu-item>
+      <el-menu-item index="8-1" @click="roles">Roles</el-menu-item>
+      <el-menu-item index="8-2" @click="permissions">Permissions</el-menu-item>
+      <el-menu-item index="8-3" @click="menus">Menus</el-menu-item>
+      <el-menu-item index="8-3" @click="channels">Channels</el-menu-item>
     </el-sub-menu>
 
     <el-menu-item index="9" @click="drawer = true">
@@ -61,11 +66,12 @@
 
 <script >
 import { defineComponent, ref } from 'vue'
+import router from '../../router'
 
 export default defineComponent({
   setup() {
     // const activeIndex = ref('1')
-    const activeIndex2 = ref('2')
+    const activeIndex2 = ref('9')
     const handleSelect = (key, keyPath) => {
       console.log(key, keyPath)
     }
@@ -75,6 +81,60 @@ export default defineComponent({
       handleSelect,
     }
   },
+  methods: {
+    roles () {
+      // object
+      router.push({ path: '/roles' })
+    },
+    awards () {
+      // object
+      router.push({ path: '/awards' })
+    },
+    analytics () {
+      // object
+      router.push({ path: '/analytics' })
+    },
+    users () {
+      // object
+      router.push({ path: '/users' })
+    },
+    sms () {
+      // object
+      router.push({ path: '/sms' })
+    },
+    email () {
+      // object
+      router.push({ path: '/email' })
+    },
+    dashboard () {
+      // object
+      router.push({ path: '/dashboard' })
+    },
+    menus () {
+      // object
+      router.push({ path: '/menus' })
+    },
+    channels () {
+      // object
+      router.push({ path: '/channels' })
+    },
+    settings () {
+      // object
+      router.push({ path: '/roles' })
+    },
+    permissions () {
+      // object
+      router.push({ path: '/permissions' })
+    },
+    profile () {
+      // object
+      router.push({ path: '/profile' })
+    },
+    surveys () {
+      // object
+      router.push({ path: '/survey' })
+    },
+  }
 })
 </script>
 

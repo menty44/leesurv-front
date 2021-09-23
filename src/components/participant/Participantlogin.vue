@@ -64,6 +64,7 @@ export default {
   },
   methods: {
     login() {
+      localStorage.setItem("menu", "open")
       router.push({ path: '/dashboard' })
     }
   }

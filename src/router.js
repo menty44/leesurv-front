@@ -24,9 +24,19 @@ const router = createRouter({
             component: () => import('@/components/roles/Roles'),
         },
         {
+            path: '/menus',
+            name: 'Menu',
+            component: () => import('@/components/menuconfig/Menuconfig'),
+        },
+        {
+            path: '/channels',
+            name: 'Channels',
+            component: () => import('@/components/channels/Channels'),
+        },
+        {
             path: '/reset',
             name: 'Reset',
-            component: () => import('@/components/reset/Reset'),
+            component: () => import('@/components/Resetpassword/Reset'),
         },
         {
             path: '/permissions',
@@ -44,19 +54,40 @@ const router = createRouter({
             component: () => import('@/components/profile/Profile'),
         },
         {
+            path: '/users',
+            name: 'Users',
+            component: () => import('@/components/users/Users'),
+        },
+        {
+            path: '/email',
+            name: 'Email',
+            component: () => import('@/components/email/Email'),
+        },
+        {
             path: '/sms',
             name: 'SMS',
             component: () => import('@/components/sms/SMS'),
         },
         {
-            path: '/org/login',
-            name: 'Organizationlogin',
-            component: () => import('@/components/organization/Organizationlogin'),
+            path: '/awards',
+            name: 'Awards',
+            component: () => import('@/components/awards/Awards'),
+        },
+
+        {
+            path: '/analytics',
+            name: 'Analytics',
+            component: () => import('@/components/Analytics/Analytics'),
         },
         {
             path: '/participant/login',
             name: 'Participantlogin',
             component: () => import('@/components/participant/Participantlogin'),
+        },
+        {
+            path: '/org/login',
+            name: 'Organizationlogin',
+            component: () => import('@/components/organization/Organizationlogin'),
         },
 
     ],

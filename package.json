@@ -9,9 +9,14 @@
   },
   "dependencies": {
     "@element-plus/icons": "0.0.11",
+    "ag-grid-community": "^26.0.0",
+    "ag-grid-vue3": "^26.0.1",
     "core-js": "^3.6.5",
     "element-plus": "^1.1.0-beta.15",
+    "highcharts": "^9.2.2",
+    "highcharts-vue": "^1.4.0",
     "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.11"
   },
   "devDependencies": {
@@ -21,7 +26,9 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0"
   },
   "eslintConfig": {
     "root": true,

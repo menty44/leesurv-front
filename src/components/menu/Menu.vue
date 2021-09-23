@@ -70,7 +70,6 @@ import router from '../../router'
 
 export default defineComponent({
   setup() {
-    // const activeIndex = ref('1')
     const activeIndex2 = ref('9')
     const handleSelect = (key, keyPath) => {
       console.log(key, keyPath)

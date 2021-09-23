@@ -51,7 +51,6 @@
 import router from "../../router";
 
 export default {
-
   data() {
     return {
       labelPosition: 'left',

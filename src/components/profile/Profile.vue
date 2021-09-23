@@ -15,7 +15,6 @@
 
 <script>
 import { defineComponent } from 'vue'
-// import Menu from "../menu/Menu";
 
 export default defineComponent({
   setup() {

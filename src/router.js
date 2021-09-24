@@ -75,6 +75,12 @@ const router = createRouter({
         },
 
         {
+            path: '/country',
+            name: 'Country',
+            component: () => import('@/components/country/Country'),
+        },
+
+        {
             path: '/analytics',
             name: 'Analytics',
             component: () => import('@/components/Analytics/Analytics'),

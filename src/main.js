@@ -6,7 +6,10 @@ import router from './router'
 import App from './App.vue'
 
 createApp(App)
+    // ElementPlus UI library
     .use(ElementPlus)
+    // HighchartsVue vue
     .use(HighchartsVue)
     .use(router)
+    // Mount the app
     .mount('#app')

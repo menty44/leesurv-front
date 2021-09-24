@@ -50,13 +50,20 @@
       <el-menu-item index="8-1" @click="roles">Roles</el-menu-item>
       <el-menu-item index="8-2" @click="permissions">Permissions</el-menu-item>
       <el-menu-item index="8-3" @click="menus">Menus</el-menu-item>
-      <el-menu-item index="8-3" @click="channels">Channels</el-menu-item>
+      <el-menu-item index="8-4" @click="countries">Countries</el-menu-item>
+      <el-menu-item index="8-5" @click="channels">Channels</el-menu-item>
     </el-sub-menu>
 
     <el-menu-item index="9" @click="drawer = true">
       <i class="el-icon-message"></i>
       Notifications
       <el-badge :value="3" class="item"></el-badge></el-menu-item>
+
+    <el-divider direction="vertical"></el-divider>
+
+    <el-menu-item style="background:red!important; float:right!important; color: white!important;" index="10" @click="logout">
+      <i class="el-icon-remove-outline"></i>
+      Logout</el-menu-item>
 
   </el-menu>
   <el-drawer v-model="drawer" title="I am the title" :with-header="false">
@@ -81,9 +88,17 @@ export default defineComponent({
     }
   },
   methods: {
+    logout () {
+      localStorage.clear()
+      router.push({ path: '/' })
+    },
     roles () {
       // object
       router.push({ path: '/roles' })
+    },
+    countries () {
+      // object
+      router.push({ path: '/country' })
     },
     awards () {
       // object
